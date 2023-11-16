@@ -1,0 +1,15 @@
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+	<div class="offcanvas-header">
+		<h5 class="offcanvas-title" id="offcanvasExampleLabel">Carrinho</h5>
+		<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div id="offcanvas-div" class="offcanvas-body">
+		<div>
+			<ul id="listaCarrinho"></ul>
+		</div>
+		<div id="total-div"></div>
+		<button type="button" id="checkout-btn" class="btn btn-warning" onclick="checkout()">Finalizar Pedido</button>
+		<button type="button" id="clear-btn" class="btn btn-danger" onclick="clearCart()">Limpar Carrinho</button>
+	</div>
+</div>

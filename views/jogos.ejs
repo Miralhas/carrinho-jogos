@@ -1,0 +1,36 @@
+<%- include('header') -%>
+
+	<main>
+		<div class="container-lg">
+			<div class="row row-cols-1 row-cols-md-4 g-4">
+				<% foda.forEach(function(product){ %>
+					<div class="col">
+						<div class="card h-100">
+							<img src="<%- product.img %>" class="card-img-top" width="300" height="172">
+							<div class="card-body">
+								<h5 class="text-center p-name"><%- product.name %></h5>
+								<hr class="my-4">
+								<p>
+									<%- product.description %>...
+								</p>
+								<div class="container-sm price-container">
+									<div class="price">R$ <%- product.price %></div>
+									<button type="button" class="btn btn-success"
+										onclick="addProduct('<%- product.id %>');">+
+										Carrinho
+									</button>
+									<input type="hidden" name="<%- product.name %>" id="<%- product.id %>"
+										data-price="<%- product.price %>" data-img="<%- product.img %>">
+								</div>
+							</div>
+						</div>
+					</div>
+					<% }); %>
+			</div>
+		</div>
+
+		<%- include('offcanvas') -%>
+
+	</main>
+
+	<%- include('footer') -%>
